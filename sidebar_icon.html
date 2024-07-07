@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<title>Travel Page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<body>
+
+<div class="sidebar" id="mySidebar">
+  <button class="close-btn" onclick="closeNav()">Close &times;</button>
+  <a href="#" class="sidebar-link">Home</a>
+  <a href="#" class="sidebar-link">Packages</a>
+  <a href="#" class="sidebar-link">Link 3</a>
+</div>
+<div id="main">
+
+<div class="header">
+  <button id="openNav" class="open-btn" onclick="openNav()">&#9776;</button>
+  <div class="header-content">
+    <h1>Travel to Cox's Bazar</h1>
+  </div>
+</div>
+<img src="pic1.jpeg" alt="demo">
+<style>
+  img {
+    border: 1px solid #d5d2d2;
+    border-radius: 4px;
+    width: 100%;
+    height: auto;
+  }
+  .sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  .sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+  }
+  .sidebar a:hover {
+    background-color: #575757;
+  }
+  .close-btn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  .open-btn {
+    font-size: 30px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+  }
+  .header {
+    background-color: #007BFF;
+    color: white;
+    padding: 20px;
+  }
+  .header-content {
+    text-align: center;
+  }
+  .container {
+    margin: 20px;
+  }
+</style>
+
+<div class="container">
+  <p>In this example, the sidebar is hidden (style="display:none")</p>
+  <p>It is shown when you click on the menu icon in the top left corner.</p>
+  <p>When it is opened, it shifts the page content to the right.</p>
+  <p>We use JavaScript to add a 25% left margin to the div element with id="main" when this happens. The value "25%" matches the width of the sidebar.</p>
+</div>
+
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+
+</body>
+</html>
+
